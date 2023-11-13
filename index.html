@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./script/Amount.js" type="module"></script>
+  <script src="./script/main.js" type="module"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div>金額<input type="number" id="InputPrice"><button id="btn">計算</button></div>
+  <br>
+  <table>
+    <tr>
+      <td>税抜額:</td>
+      <td id="ExcludingTAX"></td>
+    </tr>
+    <tr>
+      <td>消費税:</td>
+      <td id="TAX"></td>
+    </tr>
+    <tr>
+      <td>税込額:</td>
+      <td id="IncludingTAX"></td>
+    </tr>
+  </table>
+  <br>
+  <canvas id="receipt" width="300" height="180"></canvas>
+</body>
+
+</html>
