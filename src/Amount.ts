@@ -11,6 +11,10 @@ export class Amount {
     this._ExcludingTAX = Math.ceil(inputPrice / REVERSE_TAX_RATE);
     this._TAX = Math.floor(this._ExcludingTAX * TAX_RATE);
     this._IncludingTAX = this._ExcludingTAX + this.TAX;
+    if (this._InputPrice != this._IncludingTAX) {
+      this._ExcludingTAX--;
+      this._IncludingTAX = this._ExcludingTAX + this._TAX;
+    }
   }
   get InputPrice(): number { return this._InputPrice; }
   get ExcludingTAX(): number { return this._ExcludingTAX; }

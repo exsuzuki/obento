@@ -73,3 +73,31 @@ describe('BaseCheck_1000', () => {
     test('PriceCheck', () => { expect(amount.InputPrice).toEqual(amount.IncludingTAX); })
   })
 })
+describe('Over_Error', () => {
+  describe('512', () => {
+    let amount: Amount = new Amount(512);
+    test('Input', () => { expect(amount.InputPrice).toEqual(512); })
+    test('Exclude', () => { expect(amount.ExcludingTAX).toEqual(474); })
+    test('TAX', () => { expect(amount.TAX).toEqual(38); })
+    test('IncludingTAX', () => { expect(amount.IncludingTAX).toEqual(512); })
+    test('PriceCheck', () => { expect(amount.InputPrice).toEqual(amount.IncludingTAX); })
+  })
+  describe('', () => {
+    let amount: Amount = new Amount(850);
+    test('Input', () => { expect(amount.InputPrice).toEqual(850); })
+    test('Exclude', () => { expect(amount.ExcludingTAX).toEqual(787); })
+    test('TAX', () => { expect(amount.TAX).toEqual(63); })
+    test('IncludingTAX', () => { expect(amount.IncludingTAX).toEqual(850); })
+    test('PriceCheck', () => { expect(amount.InputPrice).toEqual(amount.IncludingTAX); })
+  })
+  /*
+  describe('',()=>{
+    let amount:Amount=new Amount();
+    test('Input',()=>{expect(amount.InputPrice).toEqual();})
+    test('Exclude', () => { expect(amount.ExcludingTAX).toEqual(); })
+    test('TAX', () => { expect(amount.TAX).toEqual(); })
+    test('IncludingTAX', () => { expect(amount.IncludingTAX).toEqual(); })
+    test('PriceCheck', () => { expect(amount.InputPrice).toEqual(amount.IncludingTAX); })
+  })
+  */
+})
