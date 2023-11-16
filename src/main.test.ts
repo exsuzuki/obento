@@ -82,7 +82,7 @@ describe('Over_Error', () => {
     test('IncludingTAX', () => { expect(amount.IncludingTAX).toEqual(512); })
     test('PriceCheck', () => { expect(amount.InputPrice).toEqual(amount.IncludingTAX); })
   })
-  describe('', () => {
+  describe('850', () => {
     let amount: Amount = new Amount(850);
     test('Input', () => { expect(amount.InputPrice).toEqual(850); })
     test('Exclude', () => { expect(amount.ExcludingTAX).toEqual(787); })
@@ -94,7 +94,7 @@ describe('Over_Error', () => {
   describe('',()=>{
     let amount:Amount=new Amount();
     test('Input',()=>{expect(amount.InputPrice).toEqual();})
-    test('Exclude', () => { expect(amount.ExcludingTAX).toEqual(); })
+    test('Exclude', () => { expect(amount.ExcludingTAX).toEqual(); })S
     test('TAX', () => { expect(amount.TAX).toEqual(); })
     test('IncludingTAX', () => { expect(amount.IncludingTAX).toEqual(); })
     test('PriceCheck', () => { expect(amount.InputPrice).toEqual(amount.IncludingTAX); })
